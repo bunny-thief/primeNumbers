@@ -8,6 +8,8 @@
 
 # primeNumbers Library
 
+![CI workflow](https://github.com/github/docs/actions/workflows/ci-workflow.yml/badge.svg)
+
 A simple Java library that works with prime numbers. It contains three static methods:
 1. ```java
    boolean isPrime(int n)
