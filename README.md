@@ -55,6 +55,11 @@ Then run the install command to save it to the local Maven repository.
 mvn install
 ```
 
+## Github Actions
+
+The project has includes a Github Actions workflow which runs all unit tests before commits are added
+to Github.
+
 ## Author
 
 [@bunnythief@hachyderm.io](https://hachyderm.io/@bunnythief)

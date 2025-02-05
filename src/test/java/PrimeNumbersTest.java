@@ -125,4 +125,11 @@ public class PrimeNumbersTest {
 
         assertArrayEquals(actualPrimesInRange, new int[]{31, 37});
     }
+
+    // Add failing test to test Github Actions response
+    @Test
+    public void failingTest() {
+        fail("This test will fail");
+    }
+    
 }
