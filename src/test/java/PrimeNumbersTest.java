@@ -17,7 +17,7 @@ public class PrimeNumbersTest {
 
         boolean actual = primeNumbers.isPrime(testInput);
 
-        assertTrue(actual);
+        assertTrue(actual, "Given input should be prime but method returned false");
     }
 
     @ParameterizedTest
@@ -28,7 +28,7 @@ public class PrimeNumbersTest {
 
         boolean actual = primeNumbers.isPrime(testInput);
 
-        assertFalse(actual);
+        assertFalse(actual, "Given input is not prime but method returned true");
     }
 
     @ParameterizedTest
@@ -39,7 +39,7 @@ public class PrimeNumbersTest {
 
         int actual = primeNumbers.nextPrime(testInput);
 
-        assertEquals(actual, expected);
+        assertEquals(actual, expected, "Next prime number is incorrect given the input");
     }
 
     @ParameterizedTest
@@ -50,7 +50,7 @@ public class PrimeNumbersTest {
 
         int actual = primeNumbers.nextPrime(testInput);
 
-        assertEquals(actual, expected);
+        assertEquals(actual, expected, "The result should be 17");
     }
 
     @ParameterizedTest
@@ -61,7 +61,7 @@ public class PrimeNumbersTest {
 
         int actual = primeNumbers.nextPrime(testInput);
 
-        assertNotEquals(actual, expected);
+        assertNotEquals(actual, expected, "Returned incorrect prime given input");
     }
 
     @ParameterizedTest
@@ -72,7 +72,7 @@ public class PrimeNumbersTest {
 
         int actual = primeNumbers.nextPrime(testInput);
 
-        assertEquals(actual, expected);
+        assertEquals(actual, expected, "Next prime number should be 41");
     }
 
     @ParameterizedTest
@@ -83,7 +83,7 @@ public class PrimeNumbersTest {
 
         int actual = primeNumbers.nextPrime(testInput);
 
-        assertEquals(actual, expected);
+        assertEquals(actual, expected, "Next prime number should be 59");
     }
 
     @Test
@@ -93,7 +93,7 @@ public class PrimeNumbersTest {
 
         int[] actualPrimesInRange = primeNumbers.primesInRange(2, 10);
 
-        assertArrayEquals(actualPrimesInRange, new int[]{2, 3, 5, 7});
+        assertArrayEquals(actualPrimesInRange, new int[]{2, 3, 5, 7}, "The returned array of numbers doesn't match");
     }
 
     @Test
@@ -103,7 +103,7 @@ public class PrimeNumbersTest {
 
         int[] actualPrimesInRange = primeNumbers.primesInRange(11, 20);
 
-        assertArrayEquals(actualPrimesInRange, new int[]{11, 13, 17, 19});
+        assertArrayEquals(actualPrimesInRange, new int[]{11, 13, 17, 19}, "The returned array of numbers doesn't match");
     }
 
     @Test
@@ -113,7 +113,7 @@ public class PrimeNumbersTest {
 
         int[] actualPrimesInRange = primeNumbers.primesInRange(21, 30);
 
-        assertArrayEquals(actualPrimesInRange, new int[]{23, 29});
+        assertArrayEquals(actualPrimesInRange, new int[]{23, 29}, "The returned array of numbers doesn't match");
     }
 
     @Test
@@ -123,7 +123,7 @@ public class PrimeNumbersTest {
 
         int[] actualPrimesInRange = primeNumbers.primesInRange(31, 40);
 
-        assertArrayEquals(actualPrimesInRange, new int[]{31, 37});
+        assertArrayEquals(actualPrimesInRange, new int[]{31, 37}, "The returned array of numbers doesn't match");
     }
 
 }
